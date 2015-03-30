@@ -28,9 +28,9 @@ wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh
 
 ### Before
 
-sudo npm init
+npm init
 
-sudo npm install --save socket.io
+npm install --save socket.io
 
 git init
 
