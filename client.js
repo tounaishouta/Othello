@@ -27,6 +27,17 @@
       y = Math.floor((event.clientY - offsetY) / scale);
       socket.emit("click", x, y);
     };
+    canvas.ontouchstart = function(event) {
+      var j, len, ref, t, x, y;
+      event.preventDefault();
+      ref = event.changedTouches;
+      for (j = 0, len = ref.length; j < len; j++) {
+        t = ref[j];
+        x = Math.floor((t.clientX - offsetX) / scale);
+        y = Math.floor((t.clientY - offsetY) / scale);
+        socket.emit("click", x, y);
+      }
+    };
     button_entry.onclick = function(event) {
       socket.emit("entry");
     };

@@ -32,6 +32,14 @@ form_login.onsubmit = (event) ->
     socket.emit("click", x, y)
     return
 
+  canvas.ontouchstart = (event) ->
+    event.preventDefault()
+    for t in event.changedTouches
+      x = Math.floor((t.clientX - offsetX) / scale)
+      y = Math.floor((t.clientY - offsetY) / scale)
+      socket.emit("click", x, y)
+    return
+
   button_entry.onclick = (event) ->
     socket.emit("entry")
     return
