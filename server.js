@@ -51,7 +51,15 @@
       draw();
       sendMessage("[ " + name + " log in ]");
       socket.on("disconnect", function() {
+        var color;
         sendMessage("[ " + name + " log out ]");
+        if (player != null) {
+          for (color in player) {
+            if (player[color] === id) {
+              delete player[color];
+            }
+          }
+        }
       });
       socket.on("click", function(x, y) {
         if ((turn != null) && player[turn] === id && (0 <= x && x < size) && (0 <= y && y < size)) {

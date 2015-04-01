@@ -45,6 +45,10 @@ io.on("connection", (socket) ->
 
     socket.on("disconnect", ->
       sendMessage("[ " + name + " log out ]")
+      if player?
+        for color of player
+          if player[color] == id
+            delete player[color]
       return
     )
 
