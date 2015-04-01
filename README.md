@@ -1,18 +1,18 @@
 # Othello
 
-## What I wrote ?
-
-server.coffee
-
-index.html
-
-client.coffee
-
-Procfile
+## What I wrote?
 
 README.md
 
-## What I did ?
+Procfile
+
+server.coffee
+
+client.coffee
+
+index.html
+
+## What I did?
 
 ### Preparation
 

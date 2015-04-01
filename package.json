@@ -1,13 +1,12 @@
 {
   "name": "Othello",
   "version": "0.0.0",
-  "description": "## What I wrote ?",
-  "main": "client.js",
+  "description": "Othello",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "TOUNAI Shouta",
   "license": "ISC",
   "dependencies": {
     "socket.io": "^1.3.5"

@@ -4,12 +4,56 @@
 <meta charset="utf-8">
 <title>Othello</title>
 <style>
-html, body, canvas { display: block; width: 100%; height: 100%; margin: 0; }
+html {
+  width: 100%;
+  height: 100%;
+}
+body {
+  width: calc(100% - 2 * 8px);
+  height: calc(100% - 2 * 8px);
+  margin: 8px;
+}
+div#main {
+  width: 70%;
+  height: 100%;
+  float: left;
+}
+div#sidebar {
+  width: 30%;
+  height: 100%;
+  float: right;
+}
+canvas#canvas {
+  width: 100%;
+  height: 100%;
+}
+div#div_stdout {
+  width: 100%;
+  height: calc(100% - 90px);
+  overflow: hidden;
+}
 </style>
 </head>
 <body>
-<canvas id="canvas"></canvas>
-<script src="/socket.io/socket.io.js"></script>
-<script src="/client.js"></script>
+<div id="main">
+  <canvas id="canvas"></canvas>
+</div>
+<div id="sidebar">
+  <form id="form_login">
+    <input type="text" id="text_login">
+    <input type="submit" id="submit_login" value="Log in">
+    <input type="button" id="button_entry" value="Entry">
+    <input type="button" id="button_reset" value="Reset">
+  </form>
+  <hr>
+  <div id="div_stdout"></div>
+  <hr>
+  <form id="form_chat">
+    <input type="text" id="text_chat">
+    <input type="submit" value="Submit">
+  </form>
+</div>
+<script src="socket.io/socket.io.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
